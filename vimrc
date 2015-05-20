@@ -1,7 +1,7 @@
 "execute pathogen#infect()
 "syntax on
 "filetype plugin indent on
-"colorscheme vividchalk
+colorscheme vividchalk
 "
 "set statusline+=%#warningmsg#
 "set statusline+=%{SyntasticStatuslineFlag()}
