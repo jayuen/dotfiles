@@ -1,4 +1,15 @@
-"execute pathogen#infect()
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+
+" remove .vim history tracking
+let g:netrw_dirhistmax = 0
+
+" syntax highlighting
 syntax on
 "filetype plugin indent on
 colorscheme vividchalk
