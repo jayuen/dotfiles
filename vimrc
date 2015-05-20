@@ -44,38 +44,38 @@ let g:CommandTMaxFiles=50000
 let g:CommandTInputDebounce=50
 let g:CommandTTraverseSCM='pwd' "searches downwards from current working directory
 map <Leader>f :CommandTFlush<CR>
-"
-""fixing the height of the quickfix window
-"au FileType qf call AdjustWindowHeight(3, 10) 
-"function! AdjustWindowHeight(minheight, maxheight)
-"  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
-"endfunction
-"
-""let the quickfix window be modifiable by default to allow pruning of search
-""results
-":autocmd BufReadPost quickfix set modifiable
-"
-""keyboard shortcuts for grepping
-"nnoremap GA :grep! "<C-R><C-W>" client app lib domain config bounded_contexts<CR>:copen<CR>
-"nnoremap GT :grep! "\b<C-R><C-W>\b" spec test<CR>:copen<CR>
-"nnoremap GB :grep! "\b<C-R><C-W>\b" client app lib domain config bounded_contexts spec test<CR>:copen<CR>
-"nnoremap GF :grep! "\b<C-R><C-W>\b" %<CR>:copen<CR>
-"
-""QFilter and QFilter! for pruning the QuickFix window
-"function! s:FilterQuickfixList(bang, pattern)
-"  let cmp = a:bang ? '!~#' : '=~#'
-"  call setqflist(filter(getqflist(), "bufname(v:val['bufnr']) " . cmp . " a:pattern"))
-"endfunction
-"command! -bang -nargs=1 -complete=file QFilter call s:FilterQuickfixList(<bang>0, <q-args>)
-"
-""Use SilverSearcher in grep
-"if executable('ag')
-"  " Use ag over grep
-"  set grepprg=ag\ --nogroup\ --nocolor
-"endif
-"" bind \ (backward slash) to grep shortcut
-"command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-"nnoremap \ :Ag<SPACE>
+
+"fixing the height of the quickfix window
+au FileType qf call AdjustWindowHeight(3, 10) 
+function! AdjustWindowHeight(minheight, maxheight)
+  exe max([min([line("$"), a:maxheight]), a:minheight]) . "wincmd _"
+endfunction
+
+"let the quickfix window be modifiable by default to allow pruning of search
+"results
+:autocmd BufReadPost quickfix set modifiable
+
+"keyboard shortcuts for grepping
+nnoremap GA :grep! "<C-R><C-W>" client app lib domain config bounded_contexts<CR>:copen<CR>
+nnoremap GT :grep! "\b<C-R><C-W>\b" spec test<CR>:copen<CR>
+nnoremap GB :grep! "\b<C-R><C-W>\b" client app lib domain config bounded_contexts spec test<CR>:copen<CR>
+nnoremap GF :grep! "\b<C-R><C-W>\b" %<CR>:copen<CR>
+
+"QFilter and QFilter! for pruning the QuickFix window
+function! s:FilterQuickfixList(bang, pattern)
+  let cmp = a:bang ? '!~#' : '=~#'
+  call setqflist(filter(getqflist(), "bufname(v:val['bufnr']) " . cmp . " a:pattern"))
+endfunction
+command! -bang -nargs=1 -complete=file QFilter call s:FilterQuickfixList(<bang>0, <q-args>)
+
+"Use SilverSearcher in grep
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+endif
+" bind \ (backward slash) to grep shortcut
+command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+nnoremap \ :Ag<SPACE>
 "
 "" Defaults for splits are to the right and the bottom
 "set splitright
