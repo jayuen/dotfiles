@@ -79,8 +79,8 @@ endif
 " bind \ (backward slash) to grep shortcut
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 nnoremap \ :Ag<SPACE>
-"
-"" Defaults for splits are to the right and the bottom
-"set splitright
-"set splitbelow
-"map <Leader>r :resize<SPACE>
+
+" Defaults for splits are to the right and the bottom
+set splitright
+set splitbelow
+map <Leader>r :resize<SPACE>
