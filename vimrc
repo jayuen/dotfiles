@@ -6,6 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'git://git.wincent.com/command-t.git'
+Plugin 'scrooloose/syntastic'
 call vundle#end()            " required
 filetype plugin indent on 
 
@@ -15,19 +16,21 @@ let g:netrw_dirhistmax = 0
 " syntax highlighting
 syntax on
 colorscheme vividchalk
-"
-"set statusline+=%#warningmsg#
-"set statusline+=%{SyntasticStatuslineFlag()}
-"set statusline+=%*
-"set statusline+=%F
-"set laststatus=2
-"
-"let g:syntastic_ruby_checkers=['mri']
-"let g:syntastic_javascript=['javascript']
-"let g:syntastic_always_populate_loc_list=1
-"let g:syntastic_enable_signs=1
-"set wildignore+=node_modules/**,public/**
-"
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+set statusline+=%F
+set laststatus=2
+
+let g:syntastic_ruby_checkers=['mri']
+let g:syntastic_javascript=['javascript']
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_enable_signs=1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+set wildignore+=node_modules/**,public/**
+
 set expandtab
 set tabstop=2
 set shiftwidth=2
