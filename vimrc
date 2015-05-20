@@ -5,8 +5,8 @@ filetype off                  " required
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'scrooloose/syntastic'
+Plugin 'thoughtbot/pick.vim'
 call vundle#end()            " required
 filetype plugin indent on 
 
@@ -47,6 +47,9 @@ let g:CommandTMaxFiles=50000
 let g:CommandTInputDebounce=50
 let g:CommandTTraverseSCM='pwd' "searches downwards from current working directory
 map <Leader>f :CommandTFlush<CR>
+
+" Pick.vim setting
+nnoremap <Leader>p :call PickFile()<CR>
 
 "fixing the height of the quickfix window
 au FileType qf call AdjustWindowHeight(3, 10) 
