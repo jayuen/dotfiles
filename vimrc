@@ -14,7 +14,6 @@ let g:netrw_dirhistmax = 0
 
 " syntax highlighting
 syntax on
-"filetype plugin indent on
 colorscheme vividchalk
 "
 "set statusline+=%#warningmsg#
@@ -29,15 +28,15 @@ colorscheme vividchalk
 "let g:syntastic_enable_signs=1
 "set wildignore+=node_modules/**,public/**
 "
-"set expandtab
-"set tabstop=2
-"set shiftwidth=2
-"set softtabstop=2
-"set incsearch
-"set hlsearch
-"set cursorline
-"set showmatch
-"set number
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set incsearch
+set hlsearch
+set cursorline
+set showmatch
+set number
 "
 " Command-T settings
 let g:mapleader = ","
