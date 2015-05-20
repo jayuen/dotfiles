@@ -43,10 +43,10 @@ set number
 "
 " Command-T settings
 let g:mapleader = ","
-let g:CommandTMaxFiles=50000
-let g:CommandTInputDebounce=50
-let g:CommandTTraverseSCM='pwd' "searches downwards from current working directory
-map <Leader>f :CommandTFlush<CR>
+"let g:CommandTMaxFiles=50000
+"let g:CommandTInputDebounce=50
+"let g:CommandTTraverseSCM='pwd' "searches downwards from current working directory
+"map <Leader>f :CommandTFlush<CR>
 
 " Pick.vim setting
 nnoremap <Leader>p :call PickFile()<CR>
