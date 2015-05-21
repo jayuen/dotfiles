@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'thoughtbot/pick.vim'
+Plugin 'tpope/vim-fugitive'
 call vundle#end()            " required
 filetype plugin indent on 
 
