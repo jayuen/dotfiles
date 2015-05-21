@@ -1,0 +1,18 @@
+[user]
+	name = Jason Yuen
+	email = jasony@nulogy.com
+[push]
+	default = simple
+[color]
+	branch = auto
+	diff = auto
+	ui = true
+[core]
+	commentchar = $
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	st = status
+[core]
+  mergeoptions = --no-edit
