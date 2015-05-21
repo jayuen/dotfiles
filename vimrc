@@ -50,7 +50,7 @@ let g:mapleader = ","
 "map <Leader>f :CommandTFlush<CR>
 
 " Pick.vim setting
-nnoremap <Leader>p :call PickFile()<CR>
+nnoremap <Leader>t :call PickFile()<CR>
 
 "fixing the height of the quickfix window
 au FileType qf call AdjustWindowHeight(3, 10) 
